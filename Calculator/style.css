@@ -1,0 +1,14 @@
+.title{
+    margin-bottom: 10px;
+    background-color: bisque;
+    text-align: center;
+    width:210px;
+    color: blue;
+    border: solid black 2px;
+}
+.button{
+    background-color: rgb(248, 242, 242);
+    color: white;
+    border: solid rgb(223, 215, 215) 2px;
+    width: 100px;
+}
