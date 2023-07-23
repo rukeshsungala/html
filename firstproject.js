@@ -1,9 +1,3 @@
-console.log("Hello");
-var a=10;
-console.log(a); //Var is global variable
-const b=5;{
-console.log(b);
-}
 function showTime(){
 var date =new Date();
 var h=date.getHours();
