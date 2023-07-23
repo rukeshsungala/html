@@ -29,8 +29,8 @@ if(h>12){
 h=(h<10)?"0"+h:h;
 m=(m<10)?"0"+m:m;
 s=(s<10)?"0"+s:s;
-console.log(h+ ":" + m+":"+s+" "+session);
-
+// console.log(h+ ":" + m+":"+s+" "+session);
+document.getElementById("time").innerHTML=h+ ":" + m+":"+s+" "+session;
 setTimeout(showTime,1000);
 }
 showTime();
