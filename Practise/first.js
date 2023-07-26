@@ -1,7 +1,7 @@
 var d="Hello";
 {var a=10;}
 console.log(a); //Var is global variable
-const b=5;// const can'r access outside fun and can't change the value
+const b=5;// const can't access outside fun and can't change the value
 console.log(b);
 document.getElementById("first").innerHTML=a+" "+b;
 let c=10; // let can't access outside function 
@@ -35,10 +35,34 @@ const personName={
     color:"black",
 }
 document.getElementById("object").innerHTML=personName.firstName+"  "+personName.age+"  "+personName["color"];
-//object literals 2nd method:-
+//object 2nd method:-
 const car=new Object();
 car.name="BMW";
 car.color="Black";
 car.speed=180;
 document.getElementById("obj2").innerHTML=car.name+" "+car["color"];
+
+//Strings: str.length,str.slice(),str.substring()
+const str="Hello world";
+const str1='hello';
+const replaceword=str.replace('Hello','Hi')
+document.getElementById('string').innerHTML=str+" "+str1+' '+str.length+' '+str.slice(1,4)+" "+str.substring(1,10)+' '+replaceword+' ,'+str.toUpperCase(str1)+' , '+str.toLowerCase(str1)+' , '+str.concat(str,str1)+' , '+str.trim(str)+' , '+str.indexOf('world')+' , '+str.lastIndexOf('l')+' , '+str.includes('world')+' , '+str.search('w');
+
+//Arrays:- 
+const books=[]
+books[0]='first';
+books[1]='secound';
+books[2]='third';
+document.getElementById('arr').innerHTML=books;
+
+const cart=new Array('phone','charger','display');
+const item=['basket','eatables','snacks','juice']
+document.getElementById('arr1').innerHTML=cart+'     '+item+'   ,   '+item.length+"    "+typeof(item);
+
+//Array Methods
+
+const fruit=['mango','banana','apple','kiwi']
+const fruits=fruit.toString();
+const popitem=fruit.pop();
+document.getElementById('arrm').innerHTML=fruit+" 122 "+fruits+"  "+popitem;
 
