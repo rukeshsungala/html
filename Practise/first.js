@@ -64,5 +64,26 @@ document.getElementById('arr1').innerHTML=cart+'     '+item+'   ,   '+item.lengt
 const fruit=['mango','banana','apple','kiwi']
 const fruits=fruit.toString();
 const popitem=fruit.pop();
-document.getElementById('arrm').innerHTML=fruit+" 122 "+fruits+"  "+popitem;
+const pushitem=fruit.push("ICE"); //add elm to last
+const shiftitem=fruit.shift();  //remove 1st element
+const unshiftitem=fruit.unshift("PAPAYA")  // add elm to 1st position
+//fruit.sort()-->it is sort alphabetical order 
+//fruit.reverse()-->reverse all elm in an array
+document.getElementById('arrm').innerHTML=fruit+" 122 "+fruits+"  "+popitem+" "+fruit+" "+fruit.length+" "+fruit.sort()+" "+fruit.reverse();
+//concat()--> it concat two or more arrays to single array
+//splice(start,end)--> it remove that positon element in an array
 
+
+// Dates Methods:-
+
+const today=new Date();
+//1.new Date()
+//2.new Date(year,month)
+//3.new Date(year,month,day)
+//4.new date(year,month,day,hour);
+//5.new date(year,month,day,hour,minute)
+//6.new date(year,month,day,hour,minute,second)
+//7.new date(year,month,day,hour,minute,second,ms)
+const m=new Date(2017,6,13,8);
+const h=new Date(2015,7,1,6);
+document.getElementById("date").innerHTML=today+" "+m+" "+h;
