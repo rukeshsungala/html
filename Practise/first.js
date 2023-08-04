@@ -11,7 +11,7 @@ var num1=10;
 var num2=20;
 var s=num1+num2;
 document.getElementById("add").innerHTML=s;
-// ==,===,!=,!==
+// ==,===,!=,!==, <=,>=,>,<
 var n1=10
 var n2=10
 //it will give true for all ==,===
@@ -86,4 +86,113 @@ const today=new Date();
 //7.new date(year,month,day,hour,minute,second,ms)
 const m=new Date(2017,6,13,8);
 const h=new Date(2015,7,1,6);
-document.getElementById("date").innerHTML=today+" "+m+" "+h;
+
+//to Date string(); it converts readable 
+const datestringtext=today.toDateString();
+//to UTC method
+const dateutc=today.toUTCString();
+//to ISO method
+const dateiso=today.toISOString();
+//get date methods
+//1.getFullYear()
+//2.getMonth()
+//3.getDate()
+//4.getHours()
+//5.getMinutes()
+//6.getSeconds()
+//7.getMilliseconds() 
+
+
+const fy=today.getFullYear();
+const day=today.getDate();
+
+document.getElementById("date").innerHTML=today+" "+m+" "+h+"  "+datestringtext+"     "+dateutc+"   "+dateiso+"  "+fy+"  "+day;
+
+// Similarly all set methodes did settimg the date
+//1.setFullYear()
+//2.setMonth()
+//3.setDate()
+//4.setHours()
+//5.setMinutes()
+//6.setSeconds()
+//7.setMilliseconds()
+
+//Math method
+//1.Math.pi
+//2.Math.round()
+//3.Math.ceil()
+//4.Math.floor()
+//5.Math.abs()
+//6.Math.log()
+//7.Math.max()
+//8.Math.min()
+//9.Math.sqrt()
+//10.Math.pow()
+//11.Math.random()
+const piValue=Math.PI;
+const roundof=Math.round(piValue)
+const cel=Math.ceil(piValue)
+const flr=Math.floor(piValue);
+const absolute=Math.abs(-100);
+const logvalue=Math.log(1);
+document.getElementById("mat").innerHTML=piValue+" ,"+roundof+" ,"+cel+" ,"+flr+"  ,"+absolute+"Log valueof '1':"+logvalue;
+
+
+// If-Else Statements in JavaScript
+/* if(experssion1==true){
+    execute the if condition
+}
+else if(experssion2 ==true){
+    execute first else if statement
+}
+else if(experssion3 == true){
+    execute the second else if statement
+}
+else{
+    execute else statement
+}*/
+
+const number=10;
+if(number==10){
+    document.getElementById("ife").innerHTML="the given condition is true then if is executed";
+}
+else{
+    document.getElementById("ife").innerHTML="the given condition is false then else is executed";
+}
+
+const book="Maths";
+if(book=="Science"){
+    document.getElementById("nested").innerHTML="Science Book";
+}
+else if(book=="English"){
+    document.getElementById("nested").innerHTML="English Book";
+}
+else if(book=="Hindi"){
+    document.getElementById("nested").innerHTML="Hindi Book";
+
+}
+else{
+    document.getElementById("nested").innerHTML="Maths Book";
+
+}
+
+
+//For-Loops
+/* for(initialization;condition;increment/decrement){
+    //code to be executed
+}
+*/
+for(let i=1;i<=10;i++){
+    document.getElementById("for").innerHTML="Hi"+" ";// it will give directly 10 as output
+    console.log("Now i is="+i); // 1,2,3,4,5,6,7,8,9,10
+}
+
+//While Loop:
+/*while(condition){
+    code
+}*/
+let i=0;
+while(i<10){
+    console.log(i);
+    i++;
+}
