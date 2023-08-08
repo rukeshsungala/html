@@ -288,3 +288,70 @@ console.log(sumar);
 
 const studentmark=students.reduce((acc,curr)=>acc+curr.marks,0);
 console.log(studentmark);
+
+/* try block
+catch block
+finally block
+throw */
+
+const nu=[1,2,3,4,5,6];
+try{
+    //this executes the block of code present
+    for(let i=0;i<nu.length;i++){
+        console.log(nu[i]);
+    }
+}
+catch(err){
+    //this handles or shows the error if they are any errors in the try block
+    console.log(err);
+}
+finally{
+    // it's going to execute regardless of the result of try and catch block
+    console.log('finally block');
+}
+
+// Arrow Functions
+
+var a=10
+var a1=10
+
+function myFunction(){
+    const resul=a+a1;
+    console.log(resul);
+}
+myFunction();
+
+const sum=()=>a+a1;
+console.log(sum());
+
+const area=(x,y)=>x*y;
+console.log(area(5,3));
+
+
+//Objects
+
+const person={
+    name:'john',
+    age:30,
+    marks:90,
+}
+console.log(person);
+console.log(person.name);
+console.log(person.age);
+console.log(person.marks);
+delete person.marks;
+console.log(person);
+delete person.age;
+console.log(person);
+
+const student={
+    name:'suraj',
+    age:40,
+    marks:89,
+}
+for(key in student){
+    console.log(key);
+}
+for(key in student){
+    console.log(student[key]);
+}
