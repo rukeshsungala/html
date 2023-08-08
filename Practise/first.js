@@ -193,6 +193,98 @@ for(let i=1;i<=10;i++){
 }*/
 let i=0;
 while(i<10){
-    console.log(i);
+    console.log("while loop i="+i);
     i++;
 }
+//do- while
+/* do{
+    code
+}while(condition);
+*/
+let j=0;
+do{
+    console.log("do-while loop j="+j);
+    j++;
+}while(j<10);
+
+//break
+for(let i=0;i<5;i++){
+    if(i==3)break;
+    console.log("break of i="+i);
+}
+
+//continue
+for(let j=0;j<6;j++){
+    if(j==3)continue;
+    console.log("continue of j="+j);
+}
+
+//switch
+const name='javascript'
+switch(name){
+    case 'java':
+        console.log("this is java");
+        break;
+    case 'javascript':
+        console.log('this is javascript');
+        break;
+    default:
+        console.log('this is not java or javascript');
+}
+//set 
+
+const fruitvalue=new Set();
+fruitvalue.add('apple');
+fruitvalue.add('mango');
+fruitvalue.add('banana');
+fruitvalue.add('kiwi');
+fruitvalue.add('kiwi'); // set doesn't contain duplicate values
+document.getElementById('set').innerHTML=fruitvalue.size;
+for(const x of fruitvalue.values()){
+    let res=x;
+    console.log(res);
+}
+fruitvalue.delete('banana');
+for(const x of fruitvalue.values()){
+    let res=x;
+    console.log(res);
+}
+
+// type conversion
+
+const st='123'
+console.log(typeof(Number(st)));
+console.log(typeof(st))
+
+
+// precedance /,*,+,-
+console.log(50*10+4) 
+
+console.log(100+5-30);
+
+//Map, Reduce, Filter
+
+const students=[
+    {firstName:'john',lastName:'F',age:25,marks:75},
+    {firstName:'harish',lastName:'D',age:24,marks:40},
+    {firstName:'kiran',lastName:'S',age:23,marks:50},
+    {firstName:'suresh',lastName:'M',age:22,marks:70},
+    {firstName:'virat',lastName:'P',age:20,marks:60},
+];
+
+const studentData=students.map((student)=>{
+    console.log(student.firstName.toUpperCase()+"  "+student.age);
+})
+
+const marks=students.filter((student)=>student.marks>50);
+console.log(marks);
+
+const studentage=students.filter((student)=>student.age>23);
+console.log(studentage);
+
+const ar=[1,2,3,4,5];
+const sumar=ar.reduce((acc,curr)=>acc+curr,0);
+console.log(sumar);
+
+const studentmark=students.reduce((acc,curr)=>acc+curr.marks,0);
+console.log(studentmark);
