@@ -355,3 +355,213 @@ for(key in student){
 for(key in student){
     console.log(student[key]);
 }
+
+// this keyword used in object
+const value={
+    firstName:'john',
+    lastName:'deo',
+    age:25,
+    getName:function(){
+        return this.firstName+"  "+this.lastName;
+    }
+}
+console.log(value.getName());
+
+
+
+const details={
+    firstName:'john',
+    lastName:'joe',
+    age:30,
+    marks:90,
+}
+//Object Properties
+/*
+    1. objectname.Property syntax (details.firstName)
+
+    2. objectname['property'] syntax (details['lastName'])
+
+*/
+
+console.log(details.firstName+"  "+details['lastName']);
+
+// Map
+
+const frui=new Map([
+    ["apple",300],
+    ["banaba",300],
+    ["kiwi",600],
+]);
+
+console.log(frui);
+
+/* set method in Map
+
+const values = new Map();
+
+values.set("apples",100);
+values.set("laptop",10);
+values.set("books",400);
+values.set("students",12);
+
+console.log(values);
+
+*/
+
+// get method in Map
+
+// values.get("laptop");
+
+
+console.log(frui.get("kiwi"));
+
+// has method in Map
+console.log(frui.has("apple"));
+
+//size method in Map
+console.log(frui.size);
+
+//clear method in map
+//frui.clear();
+
+
+for(val of frui){
+    console.log(val);
+}
+
+for(y of frui.keys()){
+    console.log(y);
+}
+
+/* Classes
+
+class className{
+    constructor(){
+        ... code
+    }
+    method1(){
+        ...code
+    }
+    method2(){
+        ...code
+    }
+}
+
+*/
+
+class Student{
+    constructor(name,age,marks){
+        this.name=name;
+        this.age=age;
+        this.marks=marks;
+    }
+    getMarks(){
+        console.log("The marks obtained is 100");
+    }
+    getGrade(){
+        console.log("The grade obtained is A");
+    }
+    getSum(){
+        const a=50;
+        const b=30;
+        console.log(a+b);
+    }
+}
+
+const student1=new Student("john",25,100);
+const student2=new Student("Suraj",20,95);
+console.log(student1);
+console.log(student2);
+console.log(student1.getMarks());
+console.log(student1.getSum());
+
+/*
+
+Function definations:
+
+1.function declaration
+2.function expression
+
+*/
+//function declaration
+function square(x){
+    console.log(x*x);
+}
+square(5);
+
+//function expression
+
+const res=function square(x){
+    return x*x;
+}
+console.log(res(7));
+
+//function hostinhg process:- before declare the fun's we called that fun's
+
+getResult();
+
+function getResult(){
+    const a=10;
+    const b=20;
+    console.log(a+b);
+}
+
+//Arrow Fun's
+const first=50;
+const second=100;
+const add=()=>console.log(first+second);
+add();
+
+
+/*syntax of fun's parameters
+
+function functionName(parameter1,parameter2,parameter3....){
+    ..code to execute
+}
+
+*/
+function square(num){
+    const res=num*num;
+    console.log(res);
+}
+square(50);
+
+const fun=(a,b,c)=>{
+    console.log(a+b+c);
+}
+fun(1,2,3);
+
+/* BOM -Browser Object Model 
+1.window object
+2.screen object
+3.history object
+4.navigator object
+5.location object
+6.document object
+
+*/
+
+//alert method in the window object
+// window.alert("hello world");
+
+//prompt method in the window object
+// window.prompt("enter number");
+
+//setTimeout() method
+
+window.setTimeout(()=>{
+    console.log("hello world is some code");
+},3000);
+
+//screen object
+
+console.log("screen width",screen.width);
+console.log("screen height",screen.height);
+console.log(screen.availHeight);
+console.log(screen.availWidth);
+
+//location object
+
+console.log(location.pathname);
+console.log(location.href);
+console.log(location.origin);
