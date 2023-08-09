@@ -565,3 +565,35 @@ console.log(screen.availWidth);
 console.log(location.pathname);
 console.log(location.href);
 console.log(location.origin);
+
+// form validate
+function validate(){
+    var name=document.for.name.value;
+    var password=document.for.password. value;
+
+    if(name === null || name==""){
+        window.alert("please enter the name!");
+        return false;
+    }
+    else if(password.length<6){
+        window.alert("password must be at least 6 characters");
+        return false;
+    }
+    window.alert("registered successfully");
+}
+
+/*Promises
+
+1.pending state
+2.resolved state
+3.rejected state
+4.fulfilled state
+
+*/
+
+const promise=new Promise((resolve,reject)=>{
+
+});
+console.log(promise);
+
+//
