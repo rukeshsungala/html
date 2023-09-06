@@ -32,6 +32,24 @@
             Password: <input type="password" name="password"/>
             <input type="submit" value="register"/>
         </form>
+
+        <form class="drop">
+            <p>Select your favorite from the dropdown list</p>
+            <select onchange="onSelect()" id="list">
+                <option>Select Option</option>
+                <option>Youtube</option>
+                <option>Facebook</option>
+                <option>Instagram</option>
+                <option>Amazon</option>
+                <option>Twitter</option>
+                <option>Google</option>
+                <option>Others</option>
+            </select>
+            <div class="selected">
+                <p>You Selected</p>
+                <input type="text" id="input"/>
+            </div>
+        </form>
         <script  src="./first.js"></script>
     </body>
 

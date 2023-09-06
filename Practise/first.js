@@ -596,4 +596,140 @@ const promise=new Promise((resolve,reject)=>{
 });
 console.log(promise);
 
-//
+//synchronus ->line by line
+//asynchronus-> not line by line
+// Javascript first execute synchronus and afterwards it goes to asynchronous like timeout,promises....
+
+function su(x,y){
+    return new Promise((resolve,reject)=>{
+        resolve(`the sum value is : ${x+y}`);
+    })
+}
+
+function mul(x,y){
+    return new Promise((resolve,reject)=>{
+        resolve(`the mul value is : ${x*y}`);
+    })
+}
+
+function div(x,y){
+    return new Promise((resolve,reject)=>{
+        resolve(`the div value is : ${x/y}`);
+    })
+}
+
+function sub(x,y){
+    return new Promise((resolve,reject)=>{
+        resolve(`the sub value is : ${x-y}`);
+    })
+}
+
+//promise combinations
+// 1.Promise.all()-> this is used to return a array of fullfilled promises and it rejects basically even any of them.
+// 2.promise.race()-> this is used to return the first fullifiled or the first rejected promise.
+// 3.promise.allSettled()->this is going to return an array of fullfiled and rejected promises.
+// 4.promise.any()-> this is used to return the first fullfiled promise and it ignores the rejected.
+
+
+// Promise.all([
+//     su(10,20),
+//     mul(10,20),
+//     div(20,10),
+//     sub(20,10)
+// ]).then((result)=>{
+//     console.log(result);
+// });
+
+//O/p:-['the sum value is : 30', 'the mul value is : 200', 'the div value is : 2', 'the sub value is : 10']
+
+
+// Promise.race([
+//     su(10,20),
+//     mul(10,20),
+//     div(20,10),
+//     sub(20,10)
+// ]).then((result)=>{
+//     console.log(result);
+// });
+//O/p:- the sum value is : 30
+
+// Promise.allSettled([
+//     su(10,20),
+//     mul(10,20),
+//     div(20,10),
+//     sub(20,10)
+// ]).then((result)=>{
+//     console.log(result);
+// });
+
+//O/P:-{status: 'fulfilled', value: 'the sum value is : 30'}
+// {status: 'fulfilled', value: 'the mul value is : 200'}
+// {status: 'fulfilled', value: 'the div value is : 2'}
+// {status: 'fulfilled', value: 'the sub value is : 10'}
+
+
+// Promise.any([
+//     su(10,20),
+//     mul(10,20),
+//     div(20,10),
+//     sub(20,10)
+// ]).then((result)=>{
+//     console.log(result);
+// });
+
+// O/p:-the sum value is : 30
+
+//clone Array inside js
+
+const words=['program','function','laptop'];
+
+//1. slice method
+const slicemethod=words.slice();
+console.log(slicemethod);
+
+//2.cloning is spreading the value
+const clonemethod=[...words];
+console.log(clonemethod);
+
+//3. =opearator
+//arrays and objects are reference values
+
+const fru=['mango','apple','kiwi'];
+const equalfuit=fru;
+const clonedfru=[...fru];
+
+console.log(fru === equalfuit);
+
+console.log(fru===clonedfru);
+
+equalfuit.push('banana'); // it modifies original array
+clonedfru.push('guava'); //it won't affect original array
+
+console.log(fru);
+console.log(equalfuit);
+console.log(clonedfru);
+
+// best way to copy any array or clone is by [...array]
+
+//reverse methods
+
+const word=['a','b','c','d'];
+
+console.log(word.reverse()); // it will modify original array as well o/p:-d,c,b,a
+console.log(word); //o/p:- d,c,b,a
+console.log(word.slice().reverse()); //it won't modify original array o/p:-a,b,c,d
+console.log(word); //o/p:-d,c,b,a
+console.log([...word].reverse());  //o/p:- a,b,c,d
+console.log(word); //d,c,b,a
+
+
+console.log([].concat(words,fru)); // 1.concat method 
+console.log([...words,...fru]); //2.concat method
+console.log(words.concat(fru)); // 3.concat method
+
+console.log(fru.includes('mango')); //checking the mango is present or not
+
+function onSelect(){
+    var mylist=document.getElementById('list');
+    document.getElementById('input').value=mylist.options[mylist.selectedIndex].text;
+}
