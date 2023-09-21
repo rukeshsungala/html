@@ -4,7 +4,7 @@ console.log(a); //Var is global variable
 const b=5;// const can't access outside fun and can't change the value
 console.log(b);
 document.getElementById("first").innerHTML=a+" "+b;
-let c=10; // let can't access outside function 
+let c=10; // let can't access outside function or Block Scope
 document.getElementById("fi").innerHTML=c+" "+d;
 //Operators: +,-,/,*,%,--,++
 var num1=10;
